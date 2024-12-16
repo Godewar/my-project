@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Options</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            margin: 20px auto;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .title {
+            text-align: center;
+            color: #FF5A7D;
+            font-size: 1.5em;
+        }
+        .option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px 0;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .option:hover, .option.active {
+            border-color: #FF5A7D;
+            box-shadow: 0 0 10px rgba(255, 90, 125, 0.3);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+        }
+        .discount {
+            background: #FF5A7D;
+            color: #fff;
+            padding: 2px 5px;
+            border-radius: 5px;
+            font-size: 0.8em;
+        }
+        .price {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5px;
+        }
+        .strikethrough {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9em;
+        }
+        .details {
+            display: none;
+            margin-top: 10px;
+        }
+        .details select {
+            width: 100%;
+            margin: 5px 0;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .active .details {
+            display: block;
+        }
+        .free-delivery {
+            color: #FF5A7D;
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .add-to-cart {
+            display: block;
+            width: 100%;
+            background: #FF5A7D;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .add-to-cart:hover {
+            background: #e74c6a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">YAY! It's BOGO</h1>
+        
+        <!-- 1 Unit Option -->
+        <div class="option" onclick="expandOption(this)">
+            <div class="header">
+                <span>1 Unit</span>
+                <span class="discount">10% Off</span>
+            </div>
+            <div class="price">
+                <span>$10.00 USD</span>
+                <span class="strikethrough">$24.00 USD</span>
+            </div>
+            <div class="details">
+              <p>Choose Size and Colour:</p>
+              <select>
+                  <option>Size S</option>
+                  <option>Size M</option>
+                  <option>Size L</option>
+              </select>
+              <select>
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+              </select>
+              <select>
+                  <option>Size S</option>
+                  <option>Size M</option>
+                  <option>Size L</option>
+              </select>
+              <select>
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+              </select>
+          </div>
+            <div class="details">
+                <p>Standard Price</p>
+            </div>
+        </div>
+
+        <!-- 2 Unit Option -->
+        <div class="option" onclick="expandOption(this)">
+            <div class="header">
+                <span>2 Unit</span>
+                <span class="discount">20% Off</span>
+            </div>
+            <div class="price">
+                <span>$18.00 USD</span>
+                <span class="strikethrough">$24.00 USD</span>
+            </div>
+            <div class="details">
+                <p>Choose Size and Colour:</p>
+                <select>
+                    <option>Size S</option>
+                    <option>Size M</option>
+                    <option>Size L</option>
+                </select>
+                <select>
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Red</option>
+                </select>
+                <select>
+                    <option>Size S</option>
+                    <option>Size M</option>
+                    <option>Size L</option>
+                </select>
+                <select>
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Red</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 3 Unit Option -->
+        <div class="option" onclick="expandOption(this)">
+            <div class="header">
+                <span>3 Unit</span>
+                <span class="discount">30% Off</span>
+            </div>
+            <div class="price">
+                <span>$24.00 USD</span>
+                <span class="strikethrough">$24.00 USD</span>
+            </div>
+            <div class="details">
+              <p>Choose Size and Colour:</p>
+              <select>
+                  <option>Size S</option>
+                  <option>Size M</option>
+                  <option>Size L</option>
+              </select>
+              <select>
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+              </select>
+              <select>
+                  <option>Size S</option>
+                  <option>Size M</option>
+                  <option>Size L</option>
+              </select>
+              <select>
+                  <option>Black</option>
+                  <option>White</option>
+                  <option>Red</option>
+              </select>
+          </div>
+            <div class="details">
+                <p>Great Savings!</p>
+            </div>
+        </div>
+
+        <div class="free-delivery">Free Delivery</div>
+        <button class="add-to-cart">+ Add to Cart</button>
+    </div>
+
+    <script>
+        function expandOption(element) {
+            // Collapse all options
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('active');
+            });
+            // Expand the clicked option
+            element.classList.add('active');
+        }
+    </script>
+</body>
+</html>
